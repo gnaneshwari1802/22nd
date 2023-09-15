@@ -25,6 +25,31 @@ y_train = sc_y.fit_transform(y_train)'''
 #Fitting Decision Tree Regression to the datasetmae
 
 from sklearn.tree import DecisionTreeRegressor
+"""
+Decisions tress (DTs) are the most powerful non-parametric supervised learning method. They can be used for the classification and regression tasks. The main goal of DTs is to create a model predicting target variable value by learning simple decision rules deduced from the data features. Decision trees have two main entities; one is root node, where the data splits, and other is decision nodes or leaves, where we got final output.
+What type of decision tree is used in Sklearn?
+binary tree algorithm
+Sklearn provides a DecisionTreeClassifier and DecisionTreeRegressor classes to build decision tree models. By default, Sklearn's decision tree algorithm uses the CART algorithm, which is a binary tree algorithm that works by recursively partitioning the data into two subsets.
+Decision Tree is a decision-making tool that uses a flowchart-like tree structure or is a model of decisions and all of their possible results, including outcomes, input costs, and utility.
+Decision-tree algorithm falls under the category of supervised learning algorithms. It works for both continuous as well as categorical output variables.
+
+The branches/edges represent the result of the node and the nodes have either: 
+
+Conditions [Decision Nodes]
+Result [End Nodes]
+The branches/edges represent the truth/falsity of the statement and take makes a decision based on that in the example below which shows a decision tree that evaluates the smallest of three numbers:  
+
+Decision Tree Regression: 
+Decision tree regression observes features of an object and trains a model in the structure of a tree to predict data in the future to produce meaningful continuous output. Continuous output means that the output/result is not discrete, i.e., it is not represented just by a discrete, known set of numbers or values.
+
+Discrete output example: A weather prediction model that predicts whether or not there’ll be rain on a particular day. 
+Continuous output example: A profit prediction model that states the probable profit that can be generated from the sale of a product.
+Here, continuous values are predicted with the help of a decision tree regression model.
+
+Let’s see the Step-by-Step implementation – 
+
+
+"""
 regressor = DecisionTreeRegressor(criterion = 'friedman_mse',splitter = 'random')   
 regressor.fit(X, y)
 
