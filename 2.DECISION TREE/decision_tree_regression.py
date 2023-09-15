@@ -54,6 +54,14 @@ regressor = DecisionTreeRegressor(criterion = 'friedman_mse',splitter = 'random'
 regressor.fit(X, y)
 
 from sklearn.ensemble import RandomForestRegressor 
+"""
+The sklearn. ensemble module includes two averaging algorithms based on randomized decision trees: the RandomForest algorithm and the Extra-Trees method. Both algorithms are perturb-and-combine techniques [B1998] specifically designed for trees.
+What is ensemble Python?
+Ensemble means a group of elements viewed as a whole rather than individually. An Ensemble method creates multiple models and combines them to solve it. Ensemble methods help to improve the robustness/generalizability of the model. In this article, we will discuss some methods with their implementation in Python.
+What is the use of RandomForestRegressor?
+A random forest regressor. A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.
+
+"""
 reg = RandomForestRegressor(n_estimators = 300, random_state = 0)
 reg.fit(X,y)
 
@@ -66,7 +74,23 @@ y_pred = reg.predict([[6.5]])
 
 
 plt.scatter(X, y, color = 'red')
+"""
+matplotlib.pyplot.scatter()
+Scatter plots are used to observe relationship between variables and uses dots to represent the relationship between them. The scatter() method in the matplotlib library is used to draw a scatter plot. Scatter plots are widely used to represent relation among variables and how change in one affects the other.
+"""
 plt.plot(X,regressor.predict(X), color = 'blue')
+"""
+Plotting x and y points
+The plot() function is used to draw points (markers) in a diagram.
+
+By default, the plot() function draws a line from point to point.
+
+The function takes parameters for specifying points in the diagram.
+
+Parameter 1 is an array containing the points on the x-axis.
+
+Parameter 2 is an array containing the points on the y-axis.
+"""
 plt.title('Truth or bluff (Decision tree Regression)')
 plt.xlabel('Position Level')
 plt.ylabel('salary')
@@ -91,6 +115,10 @@ plt.ylabel('Salary')
 plt.show()
 
 #if you check the plot you found the straight & verticle line hear and based on entropy & information gain it splits the whole range in the independent variable to different interval 
+"""
+What is entropy in Python?
+Information entropy quantifies the amount of uncertainty involved in the value of a random variable or the outcome of a random process. Its significance in the decision tree is that it allows us to estimate the impurity or heterogeneity of the target variable.
+"""
 #if you check the interval of 6 then you get the point of 150k & the range is 5.5. 6o 6.5
 #this is all about decission tree regression & for next session we will see the random forest 
 
